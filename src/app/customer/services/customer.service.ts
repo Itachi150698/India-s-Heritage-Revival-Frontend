@@ -115,6 +115,21 @@ export class CustomerService {
     })
   }
 
+  removeProductFromCart(productId: any): Observable<any> {
+    const userId = UserStorageService.getUserId();
+    return this.http.delete(BASIC_URL + `api/customer/cart/${userId}/${productId}`, {
+        headers: this.createAuthorizationHeader(),
+    });
+}
+
+removeProductFromWishlist(productId: any): Observable<any> {
+    const userId = UserStorageService.getUserId();
+    return this.http.delete(BASIC_URL + `api/customer/wishlist/${userId}/${productId}`, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+
    private createAuthorizationHeader(): HttpHeaders{
     return new HttpHeaders().set(
       'Authorization', 'Bearer ' + UserStorageService.getToken()

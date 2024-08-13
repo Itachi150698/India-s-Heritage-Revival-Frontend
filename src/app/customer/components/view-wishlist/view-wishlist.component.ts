@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-view-wishlist',
@@ -10,7 +11,7 @@ export class ViewWishlistComponent {
 
   products = [];
 
-  constructor(private customerService:CustomerService) {
+  constructor(private customerService:CustomerService, private snackBar:MatSnackBar) {
   }
 
   ngOnInit(): void {
@@ -26,4 +27,24 @@ export class ViewWishlistComponent {
       });
     })
   }
+
+ removeFromWishlist(productId: any): void {
+  this.customerService.removeProductFromWishlist(productId).subscribe({
+    next: (res) => {
+      console.log('Product removed successfully', res);
+      this.products = this.products.filter(product => product.productId !== productId);
+      this.snackBar.open('Product removed from wishlist', 'Close', {
+        duration: 3000,
+      });
+    },
+    error: (err) => {
+      console.error('Detailed Error Info:', err);
+      this.snackBar.open('Failed to remove product from wishlist', 'Close', {
+        duration: 3000,
+      });
+    }
+  });
+}
+
+
 }

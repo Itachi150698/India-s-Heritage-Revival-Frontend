@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AdminService } from '../../../admin/service/admin.service';
 import { CustomerService } from '../../services/customer.service';
 import { Router } from '@angular/router';
 
@@ -50,13 +49,22 @@ export class DashboardComponent {
     })
   }
 
-  addToCart(id:any){
-    this.customerService.addProductToCart(id).subscribe(res =>{
+addToCart(id: any) {
+  this.customerService.addProductToCart(id).subscribe({
+    next: (res) => {
       this.snackbar.open("Product added to cart successfully", "Close", {
         duration: 5000
-      })
-    })
-  }
+      });
+    },
+    error: (err) => {
+      console.error("Error adding product to cart", err);
+      this.snackbar.open("Failed to add product to cart", "Close", {
+        duration: 5000
+      });
+    }
+  });
+}
+
 
   viewProductDetail(productId: number): void {
     this.router.navigate(['/customer/product', productId]);

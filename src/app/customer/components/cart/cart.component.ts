@@ -78,6 +78,18 @@ export class CartComponent implements OnInit {
     })
   }
 
+  removeFromCart(productId: any) {
+  this.customerService.removeProductFromCart(productId).subscribe(
+    res => {
+      this.snackBar.open('Product removed from cart', 'Close', { duration: 5000 });
+      this.getCart(); // Refresh the cart after the product is removed
+    },
+    error => {
+      this.snackBar.open('Error removing product from cart', 'Close', { duration: 5000 });
+    }
+  );
+}
+
   placeOrder(){
     this.dialog.open(PlaceOrderComponent)
   }
