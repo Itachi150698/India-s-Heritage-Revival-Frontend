@@ -1,0 +1,240 @@
+body {
+    background: #f8f8f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#headerCarousel .carousel-item {
+    height: 600px; 
+}
+
+#headerCarousel .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    color: #800000;
+    margin-bottom: 20px;
+}
+
+.design-line {
+    width: 800px;
+    height: 5px;
+    background: #800000;
+    margin: 0 auto 40px;
+    border-radius: 5px;
+}
+
+.card {
+    border: 2px solid #800000;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.card img, .card-img-top {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+   
+}
+
+.card-body {
+    background: #800000;
+    color: white;
+    padding: 10px;
+
+}
+
+.card-body p {
+    margin: 0;
+    font-size: 11px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+.text-center p{
+            font-weight: bold; 
+            font-size: 20px;
+            margin: 0 auto;
+            max-width: 1200px; 
+            word-wrap: break-word;
+}
+
+.text-center img {
+    display: block;
+    margin: 0 auto;
+}
+
+.overlay-card-img-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 80px;
+    transition: background 0.7s;
+    
+}
+
+.overlay-card-img-overlay:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.overlay-card-text {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.overlay-card-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.overlay-btn-dark {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+.hover-card {
+    position: relative;
+    overflow: hidden; /* Ensures content stays within the card */
+    border: 2px solid #b33771;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hover-card-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Smooth transition */
+    transform: translateY(100%); /* Initially hide the overlay content by shifting it down */
+}
+
+.hover-card:hover .hover-card-img-overlay {
+    transform: translateY(0); /* Move overlay content into view on hover */
+    opacity: 1; /* Ensure opacity is fully visible */
+}
+
+.hover-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    opacity: 1; /* Always visible */
+}
+
+.hover-card-text,
+.hover-btn-dark {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out; /* Smooth transition for text and button */
+}
+
+.hover-card:hover .hover-card-text,
+.hover-card:hover .hover-btn-dark {
+    opacity: 1; /* Show the content on hover */
+}
+.custom-card-height {
+    height: 300px; /* Adjust this height as needed */
+}
+
+.custom-card-height .card-img, 
+.custom-card-height .hover-card-img-overlay {
+    height: 100%; /* Make the image and overlay fill the card */
+    object-fit: cover; /* Ensure the image covers the card area without distortion */
+}
+.taller-card {
+    height: 650px; /* Adjust this height as needed */
+}
+
+
+
+.custom-card-height .card-img, 
+.taller-card .card-img, 
+.custom-card-height .hover-card-img-overlay, 
+.taller-card .hover-card-img-overlay {
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.custom-caption {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Optional: Rounded corners */
+    color: #fff; /* Text color */
+}
+
+.custom-caption h5 {
+    margin: 0;
+    font-size: 18px; /* Adjust font size as needed */
+}
+.ajanta-section {
+   
+    padding: 30px;
+}
+.ajanta-title {
+    color: #D32F2F; /* Similar color for the title */
+    font-weight: bold;
+    font-size: 28px;
+}
+.ajanta-underline {
+    border-top: 2px solid #D32F2F; /* Similar color for underline */
+    margin-top: 10px;
+    width: 450px;
+    border-top-style: dotted;
+}
+.ajanta-content {
+    font-size: 16px;
+    color: #0c0c0c;
+    font-weight: bold; 
+}
+.video-container {
+    margin-bottom: 15px;
+}
+.ajanta-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+}
+.hover-btn-dark {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hover-btn-dark:hover {
+    background-color: white;
+    color: black;
+}
