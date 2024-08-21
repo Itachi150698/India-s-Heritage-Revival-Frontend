@@ -1,0 +1,17 @@
+{
+  "title": "Heritage Sites",
+  "items": [
+    {
+      "title": "Khajuraho",
+      "image": "https://knowindia.india.gov.in/assets/images/gallery/culture-and-heritage/10s.jpg"
+    },
+    {
+      "title": "Tanjore",
+      "image": "https://knowindia.india.gov.in/assets/images/gallery/culture-and-heritage/12s.jpg"
+    },
+    {
+      "title": "Ruins of Hampi",
+      "image": "https://knowindia.india.gov.in/assets/images/gallery/culture-and-heritage/14s.jpg"
+    }
+  ]
+}

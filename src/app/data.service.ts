@@ -6,11 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private dataUrl = 'assets/data.json';
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
-    return this.http.get<any>(this.dataUrl);
+  getData(category: string): Observable<any> {
+    return this.http.get<any>(`assets/json-files/${category}.json`);
   }
 }
