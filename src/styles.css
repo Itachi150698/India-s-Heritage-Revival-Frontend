@@ -1,0 +1,7 @@
+
+/* Fullscreen video container styles */
+body {
+    background: url('assets/background.png') no-repeat center center fixed; /* Updated path */
+    background-size: cover;
+  }
+  

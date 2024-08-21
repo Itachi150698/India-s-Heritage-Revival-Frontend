@@ -1,0 +1,239 @@
+body {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.container-fluid.ar-content {
+    padding: 20px 0;
+}
+
+.card.ar-img-over {
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card.ar-img-over div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card.ar-img-over a img {
+    width: 30px;
+    height: 30px;
+}
+
+h2 {
+    color: #800000;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #080808;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.media {
+    margin-top: 20px;
+}
+
+.media img {
+    max-width: 100%;
+    height: auto;
+}
+
+.q-box img {
+    width: 50px;
+    height: 50px;
+}
+
+.bbg h2 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.bbg h2 a:hover {
+    text-decoration: underline;
+}
+
+.category-section img {
+    margin-top: 20px;
+}
+
+.img-tag {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.second-clr {
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #800000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #f70303;
+}
+
+.comment-section {
+    margin-top: 40px;
+}
+
+.comment-section .media {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.media-body h4 {
+    font-size: 20px;
+    color: #050505;
+}
+
+.both-border {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.bottom-border {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.insta-links .card {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.insta-links .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.insta-links .card:hover .card-img-overlay {
+    opacity: 1;
+}
+
+.insta-links .card-img-overlay img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mt-5 {
+        margin-top: 20px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 20px !important;
+    }
+
+    .mt-md-4 {
+        margin-top: 20px !important;
+    }
+
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .insta-links .col-6 {
+        padding: 5px;
+    }
+
+    .insta-links .card img {
+        width: 100%;
+    }
+}
+
+
+.carousel1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.carousel1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 15px;
+}
+
+.carousel-item1 {
+    position: relative;
+    margin: 0 5px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.carousel-item1 img {
+    width: 160px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-item1:hover {
+    transform: scale(1.7);
+    z-index: 10;
+}
+
+.carousel-caption1 {
+    position: absolute;
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Centers the caption exactly */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    text-align: center; /* Centers text within the caption */
+}
+
+.carousel-item1:hover .carousel-caption1 {
+    opacity: 1;
+}
+

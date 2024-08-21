@@ -1,0 +1,53 @@
+
+/* Navbar brand styling */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Navbar navigation styling */
+.navbar-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,1);
+}
+
+/* Background color for custom navbar class */
+.bg-red-800 {
+    background-color: #800000; 
+}
+
+/* Spacing between nav items */
+.nav-item {
+    margin-left: 15px; 
+    font-family:'Courier New', Courier, monospace;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+/* Active link styling */
+.nav-link.active {
+    color: #ffd700; /* Gold color for active state */
+    font-weight: bold;
+}
+.navbar{
+    background-color: #800000;
+    color: #fff;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    margin-bottom: -30px;
+}
