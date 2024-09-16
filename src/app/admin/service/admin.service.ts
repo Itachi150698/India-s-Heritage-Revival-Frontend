@@ -18,7 +18,7 @@ addCategory(categoryDto:any): Observable<any>{
   }
 
   getAllCategories(): Observable<any>{
-    return this.http.get(BASIC_URL + 'api/admin', {
+    return this.http.get(BASIC_URL + 'api/admin/categories', {
       headers: this.createAuthorizationHeader(),
     })
   }
